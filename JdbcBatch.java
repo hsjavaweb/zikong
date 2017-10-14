@@ -7,12 +7,12 @@ import java.util.List;
 import itcast.javaUtils;
 public class AdminDao {
 	
-	// È«¾Ö²ÎÊı
+	// å…¨å±€å‚æ•°
 	private Connection con;
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 
-	// ÅúÁ¿±£´æ¹ÜÀíÔ±
+	// æ‰¹é‡ä¿å­˜ç®¡ç†å‘˜
 	public void save(List<Admin> list) {
 		// SQL
 		String sql = "INSERT INTO admin(userName,pwd) values(?,?)";
@@ -23,32 +23,32 @@ public class AdminDao {
 			
 			for (int i=0; i<list.size(); i++) {
 				Admin admin = list.get(i);
-				// ÉèÖÃ²ÎÊı
+				// è®¾ç½®å‚æ•°
 				pstmt.setString(1, admin.getUserName());
 				pstmt.setString(2, admin.getPwd());
 				
-				// Ìí¼ÓÅú´¦Àí
+				// æ·»åŠ æ‰¹å¤„ç†
 				pstmt.addBatch();					
 				
-				// ²âÊÔ£ºÃ¿5ÌõÖ´ĞĞÒ»´ÎÅú´¦Àí
+				// æµ‹è¯•ï¼šæ¯5æ¡æ‰§è¡Œä¸€æ¬¡æ‰¹å¤„ç†
 				if (i % 5 == 0) {
-					// ÅúÁ¿Ö´ĞĞ 
+					// æ‰¹é‡æ‰§è¡Œ 
 					pstmt.executeBatch();
-					// Çå¿ÕÅú´¦Àí
+					// æ¸…ç©ºæ‰¹å¤„ç†
 					pstmt.clearBatch();
 				}
 				
 			}
 			
-			// ÅúÁ¿Ö´ĞĞ 
+			// æ‰¹é‡æ‰§è¡Œ 
 			pstmt.executeBatch();
-			// Çå¿ÕÅú´¦Àí
+			// æ¸…ç©ºæ‰¹å¤„ç†
 			pstmt.clearBatch();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			JdbcUtil.closeAll(con, pstmt, rs);
+			JdbcUtil.close(con, pstmt, rs);
 		}
 	}
 }
