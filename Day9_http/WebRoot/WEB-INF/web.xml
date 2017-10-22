@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+<servlet>
+	<servlet-name>HelloServlet</servlet-name>
+    <servlet-class>a_servlet.HelloServlet</servlet-class>
+</servlet>
+  <servlet-mapping>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<url-pattern>/jd</url-pattern>
+  </servlet-mapping>
+  
+  
+ <servlet>
+  <servlet-name>RuquestDemo1</servlet-name>
+    <servlet-class>b_HttpServletRequst.RuquestDemo1</servlet-class>
+</servlet>
+  <servlet-mapping>
+  	<servlet-name>RuquestDemo1</servlet-name>
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+ <servlet>
+  <servlet-name>RequestDemo3</servlet-name>
+    <servlet-class>b_HttpServletRequst.RequestDemo3</servlet-class>
+</servlet>
+  <servlet-mapping>
+  	<servlet-name>RequestDemo3</servlet-name>
+  	<url-pattern>/hello2</url-pattern>
+  </servlet-mapping>
+  
+  
+ <servlet>
+  <servlet-name>RequestDemo4</servlet-name>
+    <servlet-class>b_HttpServletRequst.RequestDemo4</servlet-class>
+</servlet>
+  <servlet-mapping>
+  	<servlet-name>RequestDemo4</servlet-name>
+  	<url-pattern>/hello4</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>RequestDemo5</servlet-name>
+    <servlet-class>b_HttpServletRequst.RequestDemo5</servlet-class>
+</servlet>
+  <servlet-mapping>
+  	<servlet-name>RequestDemo5</servlet-name>
+  	<url-pattern>/hello5</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>ResponseDemo1</servlet-name>
+    <servlet-class>c_HttpServletResponse.ResponseDemo1</servlet-class>
+</servlet>
+  <servlet-mapping>
+  	<servlet-name>ResponseDemo1</servlet-name>
+  	<url-pattern>/response1</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>ResponseDemo2</servlet-name>
+    <servlet-class>c_HttpServletResponse.ResponseDemo2</servlet-class>
+</servlet>
+  <servlet-mapping>
+  	<servlet-name>ResponseDemo2</servlet-name>
+  	<url-pattern>/response2</url-pattern>
+  </servlet-mapping>
+  
+<servlet>
+  <servlet-name>ResponseDemo3</servlet-name>
+    <servlet-class>c_HttpServletResponse.ResponseDemo3</servlet-class>
+</servlet>
+  <servlet-mapping>
+  	<servlet-name>ResponseDemo3</servlet-name>
+  	<url-pattern>/response3</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  <servlet-name>ResponseDemo4</servlet-name>
+    <servlet-class>c_HttpServletResponse.ResponseDemo4</servlet-class>
+</servlet>
+  <servlet-mapping>
+  	<servlet-name>ResponseDemo4</servlet-name>
+  	<url-pattern>/response4</url-pattern>
+  </servlet-mapping>
+</web-app>
